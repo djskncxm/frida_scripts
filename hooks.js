@@ -54,11 +54,6 @@ function hook_dlopen2(so_name) {
 			if (this.match) {
 				console.log(so_name, "加载成功");
 				var base = Module.findBaseAddress("libDexHelper.so")
-				patch_func_nop(base.add(320504));
-				patch_func_nop(base.add(307252));
-				patch_func_nop(base.add(348692));
-				patch_func_nop(base.add(331640));
-				patch_func_nop(base.add(371144));
 				patch_func_nop(base.add(324260));
 			}
 		}
